@@ -82,7 +82,7 @@ In addition, the pipeline also produces the folders of [dofs](dofs), [segs](segs
 ## 3. Citation
 If you find this software is useful for your project or research. Please give some credits to authors who developed it by citing some of the following papers. We really appreciate that. 
 
-[1] Duan J, Bello G, Schlemper J, Bai W, Dawes TJ, Biffi C, de Marvao A, Doumou G, O’Regan DP, Rueckert D. Automatic 3D bi-ventricular segmentation of cardiac images by a shape-refined multi-task deep learning approach. IEEE transactions on medical imaging, 2019. 
+[1] Duan J, Bello G, Schlemper J, Bai W, Dawes TJ, Biffi C, de Marvao A, Doumou G, O’Regan DP, Rueckert D. Automatic 3D bi-ventricular segmentation of cardiac images by a shape-refined multi-task deep learning approach. IEEE Transactions on Medical Imaging, 2019. 
 
 [2] Bello GA,  Dawes TJW, Duan J, Biffi C, de Marvao A, Howard LSGE, Gibbs JSR, Wilkins MR, Cook SA, Rueckert D, O'Regan DP. Deep learning cardiac motion analysis for human survival prediction. Nature Machine Intelligence, 1 (2) 95, 2019.
 
