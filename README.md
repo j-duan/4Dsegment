@@ -36,9 +36,9 @@ should show `jinmingduan/segmentationcoregistration` on the list of images on yo
 
 ### Run 4D*segment* Docker image
     
-    docker run -it --rm -v /Users/jinmingduan/Desktop/data/:/data -v /Users/jinmingduan/Desktop/code/:/code -v /Users/jinmingduan/Desktop/model/:/model jinmingduan/segmentationmeshmotion /bin/bash
+    docker run -it --rm -v /Users/jinmingduan/Desktop/4Dsegment/data/:/data -v /Users/jinmingduan/Desktop/4Dsegment/code/:/code -v /Users/jinmingduan/Desktop/4Dsegment/model/:/model jinmingduan/segmentationmeshmotion /bin/bash
     
-launches an interactive linux shell terminal that gives users access to the image's internal file system. Note /Users/jinmingduan/Desktop/ is where the downloaded github repository is unzipped. In addition, the command passes the [code](code), [model](model) and [data](data) into the docker container such that the code can be run within the container
+launches an interactive linux shell terminal that gives users access to the image's internal file system. Note /Users/jinmingduan/Desktop/4Dsegment is where the downloaded github repository is unzipped. In addition, the command passes the [code](code), [model](model) and [data](data) into the docker container such that the code can be run within the container
 
 Typing next
 ```
