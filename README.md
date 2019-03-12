@@ -4,6 +4,8 @@
 :--:
 *Motion tracking using our pipeline. Left: without shape refinement; Right: with shape refinement*
 
+As a first highlight, if you walk through the instructions below patiently and correctly, I guarantee that you can run the pipeline and produce nice segmentations and meshes. As a second highlight, you won't need to worry about any compilation issues, as we have taken care of everything in advance. All you need to do is to follow the simple instructions. 
+
 The code in this repository implements 4D*segment*, a deep learning approach for carrying out segmentation, co-registration, mesh generation and motion tracking using raw grey-scale cardiac MRI data in a nifti format. The implementation was first trained using manual annotations and then deployed on pulmonary hypertension (PH) patients to produce segmentation labels and computational meshes. The whole process is fully automated without any manual inputs. 
 
 # Overview
