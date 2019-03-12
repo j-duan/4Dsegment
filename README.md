@@ -21,7 +21,7 @@ The files in this repository are organized into 3 directories:
 To run the code in the [code](code) directory, we provide a [Docker](https://www.docker.com) image with all the necessary dependencies pre-compiled. So you do not need to worry about installing or pre-compiling correct versions of dependencies, which sometimes can be a very daunting process. Morever, with Docker you will have no problem to run the code under different systems, such as Linux, MacOS, and Windows. Below are usage instructions:
 
 ## 1. Installation/Usage Guide for Docker Image
-A Docker image is available on dockerhub https://hub.docker.com/r/jinmingduan/segmentationcoregistration. This image contains a base Ubuntu linux operating system image set up with all the libraries required to run the code (e.g. *Tensorflow*, *nibabel*, *opencv*, etc.). The image contains pre-compiled IRTK (https://github.com/BioMedIA/IRTK) and MIRTK (https://github.com/BioMedIA/MIRTK) for registration, as well as external data on which the code can be run. 
+A Docker image is available on dockerhub https://hub.docker.com/r/jinmingduan/segmentationcoregistration. This image contains a base Ubuntu linux operating system image set up with all the libraries required to run the code (e.g. *Tensorflow*, *nibabel*, *opencv*, etc.). The image also contains pre-compiled IRTK (https://github.com/BioMedIA/IRTK) and MIRTK (https://github.com/BioMedIA/MIRTK) for image registration, as well as external data on which the code can be run. 
 
 ### Install Docker
 Running our 4D*segment* Docker image requires installation of the Docker software, instructions are available at https://docs.docker.com/install/ 
