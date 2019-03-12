@@ -70,7 +70,7 @@ python DMACS.py --coreNo 8 --irtk True
 ```
 will run the code using 8 CPU cores on your local computer (change the number to fit your machine) with irtk registration toolbox. 
 
-## 2. Output files from the pipeline
+## 2. Outputs from the pipeline
 
 Once the pipeline is finished, under the root directory of each subject, you have three nifti files, i.e., `lvsa_.nii.gz`, `lvsa_ED_enlarged_SR.nii.gz` and `lvsa_ES_enlarged_SR.nii.gz`, and two segmentations, i.e., `PHsegmentation_ED.gipl` and `PHsegmentation_ES.gipl`. `lvsa_.nii.gz` is the original 4D raw data and `PHsegmentation_ED.gipl` and `PHPHsegmentation_ES.gipl` are segmentations of `lvsa_ED_enlarged_SR.nii.gz` and `lvsa_ES_enlarged_SR.nii.gz`. Note that these segmentations are smooth, high-resolution bi-ventricular three-dimensional models. 
 
