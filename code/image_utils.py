@@ -388,7 +388,7 @@ def allAtlasShapeSelection(dataset_dir):
            
             landmarks = '{0}/landmarks.vtk'.format(atlas_dir)
         
-            if i < 100:
+            if i < 400:
                 if os.path.exists(atlas_3D_shape) or os.path.exists(landmarks):
                     
                     atlases_list[fr] += [atlas_3D_shape]
