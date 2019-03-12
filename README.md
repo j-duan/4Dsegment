@@ -58,7 +58,7 @@ python DMACS.py --coreNo 8 --irtk True
 ```
 will run the code using 8 CPU cores on your local computer (change the number to fit your machine) with irtk registration toolbox. 
 
-## Citation
+## 2. Citation
 If you find this software is useful for your project or research. Please give some credits to authors who developed it by citing some of the following papers. We really appreciate that. 
 
 [1] Duan J, Bello G, Schlemper J, Bai W, Dawes TJ, Biffi C, de Marvao A, Doumou G, O’Regan DP, Rueckert D. Automatic 3D bi-ventricular segmentation of cardiac images by a shape-refined multi-task deep learning approach IEEE transactions on medical imaging, 2019. 
