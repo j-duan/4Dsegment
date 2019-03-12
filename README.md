@@ -48,12 +48,6 @@ will list all the folders in the working directory of the Docker image. You shou
 
 Typing next 
 ```
-export LD_LIBRARY_PATH=/lib64 
-```
-will point you where the compiled libraries are
-
-Typing next 
-```
 cd /code
 ```
 will bring you to the directory where the code is saved
