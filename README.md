@@ -62,13 +62,22 @@ cd /code
 ```
 will bring you to the directory where the code is saved
 
-Finally do  
+Finally doing  
 ```
 python DMACS.py --coreNo 8 --irtk True
 ```
 will run the code using 8 CPU cores on your local computer (change the number to fit your machine) with irtk registration toolbox. 
 
-## 2. Citation
+## 2. Output files from the pipeline
+
+Once the pipeline is finished, under the root directory of each subject, you have three nifti files, i.e., `lvsa_.nii.gz`, `lvsa_ED_enlarged_SR.nii.gz` and `lvsa_ES_enlarged_SR.nii.gz`, and two segmentations, i.e., `PHsegmentation_ED.gipl` and `PHsegmentation_ES.gipl`. `lvsa_.nii.gz` is the original 4D raw data and `PHsegmentation_ED.gipl` and `PHPHsegmentation_ES.gipl` are segmentations of `lvsa_ED_enlarged_SR.nii.gz` and `lvsa_ES_enlarged_SR.nii.gz`. Note that these segmentations are smooth, high-resolution bi-ventricular three-dimensional models. 
+
+You also have meshes (txt files) for left and right ventricles at ED and ES. For example, `lv_myoed_curvature.txt` records the curvature of each vertex on myocardium of left ventricle at ED. `lv_myoed_wallthickness.txt` records the wall thickness of each vertex on epicardium of left ventricle at ED. `lv_myoed_signeddistances.txt` records the sign distance of each vertex on epicardium of left ventricle at ED, by referring to a template. `lv_myoed_curvature.txt`, `lv_myoes_wallthickness.txt`, and `lv_myoes_signeddistances.txt` have same meanings for left ventricle at ES. There are also counterparts for right ventricle at ED and ES. 
+
+In addition, the pipeline also produces the folders of [dofs](dofs), [segs](segs), [sizes](sizes), [tmps](tmps), [vtks](vtks) and [motion](motion). Apart from [motion](motion) folder, the files in other folders are intermediate results, which may not be useful for the sequential analysis. In [motion](motion) folder, you have 20 computational meshes (both vtk and txt files) for a complete cardiac cycle. In each of 20 meshes, only spatial locations of vertices are recorded. Vertex spatial position (x, y and z) on the same row in the txt files corresponds to the same anatomical location across the cardiac cycle.    
+
+
+## 3. Citation
 If you find this software is useful for your project or research. Please give some credits to authors who developed it by citing some of the following papers. We really appreciate that. 
 
 [1] Duan J, Bello G, Schlemper J, Bai W, Dawes TJ, Biffi C, de Marvao A, Doumou G, O’Regan DP, Rueckert D. Automatic 3D bi-ventricular segmentation of cardiac images by a shape-refined multi-task deep learning approach IEEE transactions on medical imaging, 2019. 
