@@ -1,6 +1,6 @@
 # Deep learning cardiac segmentation and motion tracking (4D*segment*)
 
-The code in this repository implements 4D*segment*, a deep learning approach for carrying out segmentation, co-registration, mesh generation and motion tracking using raw grey-scale cardiac MRI data in a nifti format. The implementation was first trained using manual annotations and then deployed on pulmonary hypertension (PH) patients to produce segmentation labels and computational meshes. The whole process is fully-automated without any manual inputs. 
+The code in this repository implements 4D*segment*, a deep learning approach for carrying out segmentation, co-registration, mesh generation and motion tracking using raw grey-scale cardiac MRI data in a nifti format. The implementation was first trained using manual annotations and then deployed on pulmonary hypertension (PH) patients to produce segmentation labels and computational meshes. The whole process is fully automated without any manual inputs. 
 
 # Overview
 The files in this repository are organized into 3 directories:
