@@ -27,7 +27,7 @@ tf.app.flags.DEFINE_integer('coreNo', 8, 'Number of CPUs.')
 tf.app.flags.DEFINE_string('test_dir', '/data',
                            'Path to the test set directory, under which images are organised in '
                            'subdirectories for each subject.')
-tf.app.flags.DEFINE_string('model_path',  '/code/model/vgg_RE_network.ckpt-50000', 'Path to the saved trained model.')
+tf.app.flags.DEFINE_string('model_path',  '/model/vgg_RE_network.ckpt-50000', 'Path to the saved trained model.')
 tf.app.flags.DEFINE_string('atlas_dir',  '/refs', 'Path to the atlas.')
 tf.app.flags.DEFINE_string('param_dir', '/par', 'Path to the registration parameters.')
 tf.app.flags.DEFINE_string('template_dir', '/vtks/1', 'Path to the template.')
