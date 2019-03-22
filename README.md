@@ -4,9 +4,7 @@
 :--:
 *Motion tracking using our pipeline. Left: without shape refinement; Right: with shape refinement*
 
-As the first highlight, if you walk through the instructions below patiently and correctly, we guarantee that you can run through the pipeline and produce nice segmentations and meshes. As the second highlight, you won't need to worry about any compilation issues, as we have taken care of everything in advance. All you need to do is to follow the simple instructions. 
-
-The code in this repository implements 4D*segment*, a pipeline for carrying out deep learning segmentation, non-rigid co-registration, mesh generation and motion tracking using raw grey-scale cardiac MRI data in a nifti format. The implementation was first trained using manual annotations and then deployed on pulmonary hypertension (PH) patients to produce segmentation labels and computational meshes. The whole process is fully automated without any manual inputs. 
+The code in this repository implements 4D*segment*, a pipeline for carrying out deep learning segmentation, non-rigid co-registration, mesh generation and motion tracking using raw grey-scale cardiac MRI data in NIfTI format. The implementation was first trained using manual annotations and then deployed on pulmonary hypertension (PH) patients to produce segmentation labels and computational meshes. The whole process is fully automated without any manual input. 
 
 # Overview
 The files in this repository are organized into 3 directories:
@@ -20,29 +18,36 @@ The files in this repository are organized into 3 directories:
 * [model](model) : contains a tensorflow model pre-trained on ~400 manual annotations on PH patients
 * [data](data) : data download address, which contains three real PH raw data (4D nifti) on which functions from the `code` directory can be run. You should download the data and place them into this folder.
 
-To run the code in the [code](code) directory, we provide a [Docker](https://www.docker.com) image with all the necessary dependencies pre-compiled. So you do not need to worry about installing or pre-compiling correct versions of dependencies, which sometimes can be a very daunting process. Morever, with Docker you will have no problem to run the code under different systems, such as Linux, MacOS, and Windows. Below are usage instructions:
+To run the code in the [code](code) directory, we provide a [Docker](https://www.docker.com) image with all the necessary dependencies pre-compiled. 
 
 ## 1. Installation/Usage Guide for Docker Image
 A Docker image is available on dockerhub https://hub.docker.com/r/jinmingduan/segmentationcoregistration. This image contains a base Ubuntu linux operating system image set up with all the libraries required to run the code (e.g. *Tensorflow*, *nibabel*, *opencv*, etc.). The image also contains pre-compiled IRTK (https://github.com/BioMedIA/IRTK) and MIRTK (https://github.com/BioMedIA/MIRTK) for image registration, as well as external data on which the code can be run. 
 
+### Download the repo
+Click the download button, unzip to your desktop and name the top-level folder `4Dsegment`.
+Go to /data and download the sample images from the URL in the text file.
+
 ### Install Docker
-Running our 4D*segment* Docker image requires installation of the Docker software, instructions are available at https://docs.docker.com/install/ 
+For Windows 10 Pro first install [Docker](https://www.docker.com/docker-windows). Windows 10 Home users will require [Docker toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/).
+
+Ensure you have the C drive selected as a [shared drive](https://docs.docker.com/docker-for-windows/) in Docker settings (or in VirtualBox on W10 Home).
+
+To visualise the segmentations download [ITKsnap](http://www.itksnap.org/pmwiki/pmwiki.php).
 
 ### Download 4D*segment* Docker image
-Once the Docker software has been installed, our 4D*segment* Docker image can be pulled from the Docker hub using the following command:
+In W10 open _PowerShell_ from the Windows search box (`Win` + `X` then `I`), in macOS navigate Finder > Applications > Utilities > Terminal, or in Linux any terminal can be used. Then download the pre-compiled image:
     
     docker pull jinmingduan/segmentationcoregistration:latest
-
-Once the image download is complete, open up a command-line terminal. On Windows operating systems, this would be the *Command Prompt* (cmd.exe), accessible by opening the [Run Command utility](https://en.wikipedia.org/wiki/Run_command) using the shortcut key `Win`+`R` and then typing `cmd`. On Mac OS, the terminal is accessible via (Finder > Applications > Utilities > Terminal). On Linux systems, any terminal can be used.
-Once a terminal is open, running the following command:
 
     docker images
 
 should show `jinmingduan/segmentationcoregistration` on the list of images on your local system
 
 ### Run 4D*segment* Docker image
+
+Note the path to the folder on your desktop eg /c/Users/home/Desktop/4Dsegment/ and substitute <folder-path> within this command:   
     
-    docker run -it --rm -v /Users/jinmingduan/Desktop/4Dsegment/data/:/data -v /Users/jinmingduan/Desktop/4Dsegment/code/:/code -v /Users/jinmingduan/Desktop/4Dsegment/model/:/model jinmingduan/segmentationmeshmotion /bin/bash
+    docker run -it --rm -v <folder-path>/data/:/data -v <folder-path>/code/:/code -v <folder-path>/model/:/model jinmingduan/segmentationmeshmotion /bin/bash
     
 launches an interactive linux shell terminal that gives users access to the image's internal file system. Note /Users/jinmingduan/Desktop/4Dsegment is where the downloaded github repository is unzipped. In addition, the command passes the [code](code), [model](model) and [data](data) into the docker container such that the code can be run within the container
 
@@ -82,7 +87,7 @@ In addition, the pipeline also produces the folders of [dofs](dofs), [segs](segs
 ## 3. Citation
 If you find this software useful for your project or research. Please give some credits to authors who developed it by citing some of the following papers. We really appreciate that. 
 
-[1] Duan J, Bello G, Schlemper J, Bai W, Dawes TJ, Biffi C, de Marvao A, Doumou G, O’Regan DP, Rueckert D. Automatic 3D bi-ventricular segmentation of cardiac images by a shape-refined multi-task deep learning approach. IEEE Transactions on Medical Imaging, 2019. 
+[1] Duan J, Bello G, Schlemper J, Bai W, Dawes TJ, Biffi C, de Marvao A, Doumou G, O’Regan DP, Rueckert D. Automatic 3D bi-ventricular segmentation of cardiac images by a shape-refined multi-task deep learning approach. *[IEEE Transactions on Medical Imaging](https://doi.org/10.1109/TMI.2019.2894322)* (2019). 
 
-[2] Bello GA,  Dawes TJW, Duan J, Biffi C, de Marvao A, Howard LSGE, Gibbs JSR, Wilkins MR, Cook SA, Rueckert D, O'Regan DP. Deep learning cardiac motion analysis for human survival prediction. Nature Machine Intelligence, 1 (2) 95, 2019.
+[2] Bello GA, Dawes TJW, Duan J, Biffi C, de Marvao A, Howard LSGE, Gibbs JSR, Wilkins MR, Cook SA, Rueckert D, O'Regan DP. Deep learning cardiac motion analysis for human survival prediction. *[Nature Machine Intelligence](https://doi.org/10.1038/s42256-019-0019-2)* 1, 95–104 (2019).
 
