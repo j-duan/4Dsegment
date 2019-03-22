@@ -16,7 +16,7 @@ The files in this repository are organized into 3 directories:
   * useful image processing functions used in the pipeline - [code/image_utils.py](code/image_utils.py)
   * downsample mesh resolution while remain its geometry - [code/decimation.py](code/decimation.py)
 * [model](model) : contains a tensorflow model pre-trained on ~400 manual annotations on PH patients
-* [data](data) : data download address, which contains three real PH raw data (4D nifti) on which functions from the `code` directory can be run. You should download the data and place them into this folder.
+* [data](data) : data download address, which contains three sample datasets (4D NIfTI) on which functions from the `code` directory can be run. You should download the data and place them into this folder.
 
 To run the code in the [code](code) directory, we provide a [Docker](https://www.docker.com) image with all the necessary dependencies pre-compiled. 
 
