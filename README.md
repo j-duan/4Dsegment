@@ -45,7 +45,7 @@ should show `jinmingduan/segmentationcoregistration` on the list of images on yo
 
 ### Run 4D*segment* Docker image
 
-Note the path to the folder on your desktop eg /c/Users/home/Desktop/4Dsegment/ and substitute \<folder-path\> within this command:   
+Note the path to the folder on your desktop eg /c/Users/home/Desktop/4Dsegment and substitute \<folder-path\> within this command:   
     
     docker run -it --rm -v <folder-path>/data/:/data -v <folder-path>/code/:/code -v <folder-path>/model/:/model jinmingduan/segmentationmeshmotion /bin/bash
     
