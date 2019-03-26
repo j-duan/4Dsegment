@@ -25,7 +25,7 @@ A Docker image is available on dockerhub https://hub.docker.com/r/jinmingduan/se
 
 ### Download the repo
 Click the download button, unzip to your desktop and name the top-level folder `4Dsegment`.
-Go to /data and download the sample images from the URL in the text file.
+Go to /data and download the sample images (nifti format) from the URL in the text file.
 
 ### Install Docker
 For Windows 10 Pro first install [Docker](https://www.docker.com/docker-windows). Windows 10 Home users will require [Docker toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/).
