@@ -49,7 +49,7 @@ Note the path to the folder on your desktop eg /c/Users/home/Desktop/4Dsegment a
     
     docker run -it --rm -v <folder-path>/data/:/data -v <folder-path>/code/:/code -v <folder-path>/model/:/model jinmingduan/segmentationmeshmotion /bin/bash
     
-launches an interactive linux shell terminal that gives users access to the image's internal file system. Note /Users/jinmingduan/Desktop/4Dsegment is where the downloaded github repository is unzipped. In addition, the command passes the [code](code), [model](model) and [data](data) into the docker container such that the code can be run within the container
+launches an interactive linux shell terminal that gives users access to the image's internal file system. The command passes the code, model and data into the docker container such that the code can be run within the container.
 
 Typing next
 ```
