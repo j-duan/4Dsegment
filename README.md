@@ -18,7 +18,7 @@ The files in this repository are organized into 3 directories:
 * [model](model) : contains a tensorflow model pre-trained on ~400 manual annotations on PH patients
 * [data](data) : data download address, which contains three sample datasets (4D NIfTI) on which functions from the `code` directory can be run. You should download the data and place them into this folder.
 
-To run the code in the [code](code) directory, we provide a [Docker](https://www.docker.com) image with all the necessary dependencies pre-compiled. 
+To run the code in the [code](code) directory, we provide a [Docker](https://www.docker.com) image with all the necessary dependencies/libraries pre-compiled. 
 
 ## 1. Installation/Usage Guide for Docker Image
 A Docker image is available on dockerhub https://hub.docker.com/r/jinmingduan/segmentationcoregistration. This image contains a base Ubuntu linux operating system image set up with all the libraries required to run the code (e.g. *Tensorflow*, *nibabel*, *opencv*, etc.). The image also contains pre-compiled IRTK (https://github.com/BioMedIA/IRTK) and MIRTK (https://github.com/BioMedIA/MIRTK) for image registration, as well as external data on which the code can be run. 
