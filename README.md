@@ -2,7 +2,7 @@
 
 ![](data/screen.gif)
 :--:
-*Motion tracking using our pipeline. Left: without shape refinement; Right: with shape refinement*
+*Motion tracking using our pipeline. Left: without shape refinement; Right: with shape refinement* [![DOI](https://zenodo.org/badge/177131553.svg)](https://zenodo.org/badge/latestdoi/177131553)
 
 The code in this repository implements 4D*segment*, a pipeline for carrying out deep learning segmentation, non-rigid co-registration, mesh generation and motion tracking using raw grey-scale cardiac MRI data in NIfTI format. The implementation was first trained using manual annotations and then deployed on pulmonary hypertension (PH) patients to produce segmentation labels and computational meshes. The whole process is fully automated without any manual input. 
 
